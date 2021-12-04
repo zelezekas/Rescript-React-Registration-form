@@ -2,9 +2,9 @@
 // https://reactjs.org/docs/hooks-reference.html#usereducer
 
 // A little extra we've put, because the ReactJS example has no styling
-let leftButtonStyle = ReactDOMRe.Style.make(~borderRadius="4px 0px 0px 4px", ~width="48px", ());
-let rightButtonStyle = ReactDOMRe.Style.make(~borderRadius="0px 4px 4px 0px", ~width="48px", ());
-let containerStyle = ReactDOMRe.Style.make(~display="flex", ~alignItems="center", ~justifyContent="space-between", ());
+let leftButtonStyle = ReactDOM.Style.make(~borderRadius="4px 0px 0px 4px", ~width="48px", ());
+let rightButtonStyle = ReactDOM.Style.make(~borderRadius="0px 4px 4px 0px", ~width="48px", ());
+let containerStyle = ReactDOM.Style.make(~display="flex", ~alignItems="center", ~justifyContent="space-between", ());
 
 // Record and variant need explicit declarations.
 type state = {count: int};

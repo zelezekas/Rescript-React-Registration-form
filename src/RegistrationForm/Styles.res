@@ -1,28 +1,28 @@
-let formStyle = ReactDOMRe.Style.make(
+let formStyle = ReactDOM.Style.make(
     ~marginLeft="20px",
     ~marginBottom="20px",
     ()
   );
-  let labelStyle = ReactDOMRe.Style.make(
+  let labelStyle = ReactDOM.Style.make(
     ~fontSize="14px",
     ~marginBottom="6px",
     ~color="dodgerblue",
     (),
   );
-  let conditionsContainerStyle = ReactDOMRe.Style.make(
+  let conditionsContainerStyle = ReactDOM.Style.make(
     ~marginTop="25px",
     ~fontSize="14px",
     ~marginBottom="25px",
     (),
   )
-  let checkboxStyle = ReactDOMRe.Style.make(
+  let checkboxStyle = ReactDOM.Style.make(
     ~display="flex",
     ~alignItems="center",
     ~marginLeft="-26px",
     ~height="22px",
     (),
   );
-  let passwordConditionsStyle = ReactDOMRe.Style.make(
+  let passwordConditionsStyle = ReactDOM.Style.make(
     ~marginLeft="7px",
     ()
   )

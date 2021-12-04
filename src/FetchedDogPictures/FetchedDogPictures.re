@@ -37,7 +37,7 @@ let make = () => {
   });
 
   <div
-    style={ReactDOMRe.Style.make(
+    style={ReactDOM.Style.make(
       ~height="120px",
       ~display="flex",
       ~alignItems="center",
@@ -51,7 +51,7 @@ let make = () => {
        dogs
        ->Belt.Array.mapWithIndex((i, dog) => {
            let imageStyle =
-             ReactDOMRe.Style.make(
+             ReactDOM.Style.make(
                ~height="120px",
                ~width="100%",
                ~marginRight=i === Js.Array.length(dogs) - 1 ? "0px" : "8px",

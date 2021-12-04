@@ -1,5 +1,5 @@
-[@bs.val] external alert : string => unit = "alert";
-[@react.component]
+@val external alert : string => unit = "alert";
+@react.component
 let make = () => {
   let (username, onChange) = React.useState(() => "");
   let (password, setPassword) = React.useState(() => "");
@@ -19,25 +19,25 @@ let make = () => {
 
   React.useEffect1(
     () => {
-      Js.Re.test_([%re "/....../"], username)
+      Js.Re.test_(%re("/....../"), username)
       ? setUsernameApproved(_previousState => true)
       : setUsernameApproved(_previousState => false);
       
       None;
-    }, [|username|],
+    }, [username],
   );
   
   React.useEffect7(() => {
-     if (Js.Re.test_([%re "/[a-z]/"], password) != hasLowercaseLetter) {
+     if (Js.Re.test_(%re("/[a-z]/"), password) != hasLowercaseLetter) {
         setHasLowercaseLetter(_previousState => !_previousState)
       };
-     if (Js.Re.test_([%re "/[A-Z]/"], password) != hasUppercaseLetter) {
+     if (Js.Re.test_(%re("/[A-Z]/"), password) != hasUppercaseLetter) {
         setHasUppercaseLetter(_previousState => !_previousState)
       };
-     if (Js.Re.test_([%re "/\\d/"], password) != hasDigit) {
+     if (Js.Re.test_(%re("/\\d/"), password) != hasDigit) {
         setHasDigit(_previousState => !_previousState)
       };
-     if (Js.Re.test_([%re "/....../"], password) != hasSixCharacters) {
+     if (Js.Re.test_(%re("/....../"), password) != hasSixCharacters) {
         setHasSixCharacters(_previousState => !_previousState)
       };
      if ((usernameApproved && hasLowercaseLetter && hasUppercaseLetter && hasDigit && hasSixCharacters) == registerButtonDisabled) {
@@ -56,7 +56,7 @@ let make = () => {
       placeholder="Enter username"
       onChange={
         event => {
-          let value = ReactEvent.Form.target(event)##value;
+          let value = ReactEvent.Form.target(event)["value"];
           onChange(_ => value)
         }
       }
@@ -68,7 +68,7 @@ let make = () => {
       placeholder="Enter password"
       onChange={
         event => {
-          let value = ReactEvent.Form.target(event)##value;
+          let value = ReactEvent.Form.target(event)["value"];
           setPassword(_ => value)
         }
       }

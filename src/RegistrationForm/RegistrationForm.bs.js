@@ -47,7 +47,7 @@ function RegistrationForm(Props) {
   var registerButtonDisabled = match$7[0];
   var handleSubmit = function ($$event) {
     $$event.preventDefault();
-    alert("Username: " + (username + (" Password: " + password)));
+    alert("Username: " + username + " Password: " + password);
     Curry._1(onChange, (function (_previousState) {
             return "";
           }));
